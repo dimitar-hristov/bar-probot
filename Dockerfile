@@ -7,7 +7,7 @@ ENV NODE_ENV="production"
 COPY . .
 RUN pwd
 #CMD [ "npm", "start" ]
-#ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["ls", "-al"]
-CMD ["pwd"]
+#CMD ["pwd"]
 #RUN pwd
