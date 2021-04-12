@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /
 echo "Execute From Directory: $(pwd)"
 echo "Content: $(ls -al)"
 RESP=`npm start`
