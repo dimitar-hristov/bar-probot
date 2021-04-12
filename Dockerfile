@@ -6,6 +6,7 @@ RUN npm cache clean --force
 ENV NODE_ENV="production"
 COPY . .
 RUN pwd
+RUN chmod +x /entrypoint.sh
 #CMD [ "npm", "start" ]
 ENTRYPOINT ["/entrypoint.sh"]
 #CMD ["ls", "-al"]
