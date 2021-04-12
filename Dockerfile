@@ -1,14 +1,14 @@
 FROM node:12-slim
-#WORKDIR /usr/src/app
+WORKDIR /github/workspace
 COPY package.json package-lock.json ./
 RUN npm ci --production
 RUN npm cache clean --force
 ENV NODE_ENV="production"
 COPY . .
 RUN pwd
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 #CMD [ "npm", "start" ]
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
 #CMD ["ls", "-al"]
 #CMD ["pwd"]
 #RUN pwd
