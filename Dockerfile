@@ -5,5 +5,9 @@ RUN npm ci --production
 RUN npm cache clean --force
 ENV NODE_ENV="production"
 COPY . .
+RUN pwd
 #CMD [ "npm", "start" ]
-ENTRYPOINT ["./entrypoint.sh"]
+#ENTRYPOINT ["./entrypoint.sh"]
+#CMD ["ls", "-al"]
+CMD ["pwd"]
+#RUN pwd
