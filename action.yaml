@@ -2,4 +2,4 @@ name: Bar-Probot Example
 description: "Example Action built with Probot (bar-probot)"
 runs:
   using: 'docker'
-  main: 'Dockerfile'
+  image: 'Dockerfile'
